@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Analyzer</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Resume Analyzer</h1>
+        <p>Upload your resume (TXT or PDF) to analyze it.</p>
+        
+        <div class="file-upload-wrapper">
+            <input type="file" id="resumeUpload" accept=".txt,.pdf,.doc,.docx" onchange="updateFileName()">
+            <label for="resumeUpload" class="custom-file-upload">
+                <span id="fileName">📂 Choose File</span>
+            </label>
+        </div>
+        
+        <textarea id="resumeText" placeholder="Or paste your resume text here..." rows="10"></textarea>
+        <button onclick="analyzeResume()">Analyze Resume</button>
+        
+        <div id="analysisResult"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
